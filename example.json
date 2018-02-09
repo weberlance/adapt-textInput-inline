@@ -1,0 +1,132 @@
+// inline just text, default text-align
+{
+  "_id": "c-05",
+  "_parentId": "b-10",
+  "_type": "component",
+  "_component": "textinputinline",
+  "_classes": "",
+  "_layout": "left",
+  "title": "Title of our component",
+  "displayTitle": "Title of our component",
+  "body": "There are several emty fields. Fill it using hints.",
+  "instruction": "",
+  "_attempts": 1,
+  "_questionWeight": 1,
+  "_canShowModelAnswer": true,
+  "_shouldDisplayAttempts": false,
+  "_canShowFeedback": true,
+  "_canShowMarking": true,
+  "_recordInteraction": true,
+  "_allowsAnyCase": true,
+  "_allowsPunctuation": true,
+  "_items": [
+    {
+      "prefix": "Some text BEFORE field-1",
+      "placeholder": "Enter here(one)",
+      "suffix": ". Text AFTER field-1 and ",
+      "_answers": [
+          "1",
+          "one"
+      ]
+    },
+    {
+      "prefix": "here is the proceed text BEFORE field-2",
+      "placeholder": "Enter here(two)",
+      "suffix": "and finally text AFTER field-2!.",
+      "_answers": [
+          "2",
+          "two"
+      ]
+    }
+  ],
+  "_feedback": {
+    "correct": "This feedback will appear if you answered the question correctly.",
+    "_incorrect": {
+      "notFinal": "",
+      "final": "This feedback will appear if you answered the question incorrectly."
+    },
+    "_partlyCorrect": {
+      "notFinal": "",
+      "final": "This feedback will appear if you answered part of the question correctly."
+    }
+  },
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  },
+  "_comment": "You only need to include _buttons if you want to override the button labels that are set in course.json",
+  "_buttons": {
+    "_submit": {
+      "buttonText": "Submit",
+      "ariaLabel": "Select here to submit your answer."
+    },
+    "_reset": {
+      "buttonText": "Reset",
+      "ariaLabel": ""
+    },
+    "_showCorrectAnswer": {
+      "buttonText": "Correct Answer",
+      "ariaLabel": ""
+    },
+    "_hideCorrectAnswer": {
+      "buttonText": "My Answer",
+      "ariaLabel": ""
+    },
+    "_showFeedback": {
+      "buttonText": "Show feedback",
+      "ariaLabel": ""
+    },
+    "remainingAttemptsText": "attempts remaining",
+    "remainingAttemptText": "final attempt"
+  }
+}
+
+// inline, poem style, with text-align: left
+{
+  "_id": "c-10",
+  "_parentId": "b-10",
+  "_type": "component",
+  "_component": "textinputinline",
+  "_classes": "text-left",
+  "_layout": "right",
+  "title": "Title of our comp",
+  "displayTitle": "Title of our comp",
+  "body": "Good known poem.",
+  "instruction": "Fill in your answers below.",
+  "_attempts": 1,
+  "_allowsAnyCase": true,
+  "_allowsPunctuation": true,
+  "_questionWeight": 1,
+  "_items": [
+    {
+      "prefix": "Jingle bells, jingle bells,<br>Jingle all the ",
+      "placeholder": "Enter answer here",
+      "suffix": ".",
+      "_answers": [
+          "way"
+      ]
+    },
+    {
+      "prefix": "<br>Oh! what ",
+      "placeholder": "Enter answer here",
+      "suffix": " it is to ride<br>In a one-horse open sleigh.",
+      "_answers": [
+          "fun",
+          "joy"
+      ]
+    }
+  ],
+  "_feedback": {
+    "correct": "This feedback will appear if you answered the question correctly.",
+    "_incorrect": {
+      "notFinal": "",
+      "final": "This feedback will appear if you answered the question incorrectly."
+    },
+    "_partlyCorrect": {
+      "notFinal": "",
+      "final": "This feedback will appear if you answered part of the question correctly."
+    }
+  },
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}

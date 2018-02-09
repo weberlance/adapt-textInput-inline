@@ -1,0 +1,14 @@
+{
+  "name": "adapt-textInput-inline",
+  "version": "0.0.1",
+  "framework": ">=2.0.11",
+  "description": "A question component that allows the learner to input text based upon a question stem. Input fields and text are inline.",
+  "main": "/js/adapt-textInput-inline.js",
+  "displayName" : "Text Input Inline",
+  "component" : "textinputinline",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
+}

@@ -1,0 +1,98 @@
+.textinputinline-widget {
+    background-color: @item-color;
+    padding: @item-padding;
+    text-align: justify;
+    .text-left & {
+        text-align: left;
+        .dir-rtl & {
+            text-align: right;
+        }
+    }
+}
+.textinputinline-item {
+    position: relative;
+    display: inline;
+}
+
+.textinputinline-item span {
+    background-color: transparent;
+    line-height: 32px;
+    cursor: default;
+    color: @item-text-color;
+}
+
+.textinputinline-item-inner {
+    display: inline-block;
+    position: relative;
+}
+
+.textinputinline-item-textbox {
+    box-sizing: border-box;
+    padding: 0 5px;
+    width: 170px;
+    min-width: 30%;
+    max-width: 100%;
+    height: 26px;
+    &.textinputinline-validation-error {
+        border: 2px solid @validation-error-border-color;
+    }
+}
+
+.textinputinline-widget {
+    &.submitted {
+        background-color: @item-color-disabled;
+    }
+
+    &.show-user-answer {
+        .incorrect {
+            .textinputinline-incorrect-icon {
+                display: inline-block;
+            }
+        }
+        .correct {
+            .textinputinline-correct-icon {
+                display: inline-block;
+            }
+        }
+        .incorrect,
+        .correct {
+            .textinputinline-item-textbox {
+                padding-right: @icon-size + 4;
+            }
+        }
+    }
+
+    &.show-correct-answer {
+        .textinputinline-select-icon {
+            display: none;
+        }
+        .correct .textinputinline-correct-icon {
+            display: inline-block;
+        }
+    }
+
+    .textinputinline-item-state {
+        background: none;
+        position: absolute;
+        right: (@icon-size/2) - 8;
+        .dir-rtl & {
+            right: inherit;
+            left: (@icon-size/2) - 8;
+        }
+        width: @icon-size;
+        height: @icon-size;
+        top: 50%;
+        margin-top: -(@icon-size/2);
+        z-index: 0;
+    }
+
+    .textinputinline-correct-icon {
+        color: @icon-correct-color;
+        display: none;
+    }
+
+    .textinputinline-incorrect-icon {
+        color: @icon-incorrect-color;
+        display: none;
+    }
+}

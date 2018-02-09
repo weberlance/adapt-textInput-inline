@@ -1,0 +1,37 @@
+<div class="textinputinline-inner component-inner" role="region" aria-label="{{_globals._components._textinputinline.ariaRegion}}" {{#if _globals._components._textinputinline.ariaRegion}}tabindex="0"{{/if}}>
+    {{> component this}}
+    {{! complex unless and if combination to set the correct classes for CSS to use in showing marking and disabled states}}
+    <div class="textinputinline-widget component-widget {{#unless _isEnabled}} disabled {{#if _isInteractionComplete}} complete submitted show-user-answer {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
+        {{#each _items}}
+        <div class="textinputinline-item component-item component-item-color component-item-border {{#if prefix}}prefix{{/if}} {{#if suffix}}suffix{{/if}} {{#unless ../_isEnabled}}{{#if ../_canShowMarking}}{{#if _isCorrect}}correct{{else}}incorrect{{/if}}{{/if}}{{/unless}}">
+            {{#if prefix}}
+                <span class="textinputinline-item-prefix component-item-text-color" id="{{../_id}}-{{@index}}-aria" aria-label="{{{prefix}}}">
+                    {{{prefix}}}
+                </span>
+            {{/if}}
+            {{!-- START input element --}}
+            <div class="textinputinline-item-inner">
+                {{#if ../_isEnabled}}
+                    <input type="text" placeholder="{{{placeholder}}}" class="textinputinline-item-textbox" data-id="input-{{@index}}" id="{{../_id}}-{{@index}}" aria-labelledby="{{../_id}}-{{@index}}-aria" value="" role="textbox">
+                {{else}}
+                    <input type="text" placeholder="{{{placeholder}}}" class="textinputinline-item-textbox" data-id="input-{{@index}}" value="{{userAnswer}}" disabled="true" role="textbox">
+                {{/if}}
+                
+                {{!-- question state section --}}
+                <div class="textinputinline-item-state">
+                    <div class="textinputinline-icon textinputinline-correct-icon icon icon-tick"></div>
+                    <div class="textinputinline-icon textinputinline-incorrect-icon icon icon-cross"></div>
+                </div>
+            </div>
+            {{!-- END input element  --}}
+            {{#if suffix}}
+                <span class="textinputinline-item-suffix component-item-text-color" id="{{../_id}}-{{@index}}-aria" aria-label="{{{suffix}}}">
+                    {{{suffix}}}
+                </span>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+    <div class="buttons">
+    </div>
+</div>
