@@ -1,6 +1,8 @@
 # adapt-textInput-inline  
 
-**Text Input Inline** is a *question component* based on Text Input component(https://github.com/adaptlearning/adapt-contrib-textInput).  
+**Text Input Inline** is a *question component* based on [Text Input component](https://github.com/adaptlearning/adapt-contrib-textInput).  
+
+<img src="https://weberlance.bitbucket.io/images/textInputInline.gif" alt="Text Input Inline in action">  
 
 **Text Input Inline** allows the user to input a free-form answer in response to an initial question. The author may supply multiple correct answers to accommodate, for example, variations in spelling. The author may also supply a suffix and prefix to be added to the text field. Main difference from original Text Input component is capability to write multiline text with inline inputs fields.
 
